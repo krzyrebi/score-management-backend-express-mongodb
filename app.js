@@ -7,7 +7,9 @@ const router = require('./routes/api')
 require('./db/mongoose')
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://master.d228fp9nqtrw6x.amplifyapp.com'
+}));
 app.use(bodyParser.json());
 app.use('/', router);
 
