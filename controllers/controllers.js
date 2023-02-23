@@ -1,7 +1,7 @@
 const Game = require('../db/game')
 
 class GameActions {
-    async getAllGames(req, res, netx) {
+    async getAllGames(req, res) {
         let docs;
         try {
             docs = await Game.find({});
@@ -9,7 +9,6 @@ class GameActions {
             res.status(500).send(error);
         }
         res.status(200).send(docs);
-        netx();
     }
 
     async getGame(req, res) {

@@ -6,11 +6,9 @@ const cors = require('cors')
 const router = require('./routes/api')
 require('./db/mongoose')
 
-
-app.use(cors({
-    origin: '*'
-}));
-app.use(bodyParser.json());
+app.use(express.json())
+// app.use(bodyParser.json());
+app.use(cors());
 app.use('/', router);
 
 app.listen(port, () => {
