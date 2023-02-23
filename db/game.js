@@ -10,7 +10,7 @@ const gameSchema = new mongoose.Schema({
         required: true
     },
     goalScorers: {
-        type: Array,
+        type: String,
         required: true
     }
 });

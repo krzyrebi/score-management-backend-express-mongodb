@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const { port } = require('./config')
-const router = require('./routes/api')
 const cors = require('cors')
+const router = require('./routes/api')
 require('./db/mongoose')
 
 
